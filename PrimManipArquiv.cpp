@@ -2,6 +2,8 @@
 
 using namespace std;
 
-int int main(int argc, const char** argv) {
+void function_teste(string teste);
+
+int main(int argc, const char** argv) {
     return 0;
 }
