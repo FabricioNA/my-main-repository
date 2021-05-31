@@ -5,6 +5,7 @@
 #include <string>
 #include <string.h>
 #include <iostream>
+#define aux 30
 using namespace std;
 
 struct TCredencial {
@@ -35,12 +36,13 @@ struct cadastro_cliente{
 		endereco.UF = estado;
     }
 	void imprimir(){
-    cout << "Sua struct tem " << nome_cliente << idade << sexo << endereco.logradouro << endereco.cidade << endereco.UF; 
+    cout << "Dados do Cliente:" << nome_cliente << endl << idade << endl << sexo << endl << "Endereco:" 
+	<< endereco.logradouro << endl << endereco.cidade << endl << endereco.UF; 
     }
 };
 
 int main (void) {
-	while (true) {
+	/*while (true) {
 		system ("cls");
 		puts ("\n===========================================");	
 		printf ("Usuario: ");
@@ -57,9 +59,9 @@ int main (void) {
 		}
 	cout << "Credenciais Invalidadas! Tente Novamente!" << endl;
 	system("pause");
-	}
+	}*/
+	int cont = 0;
 	while (true) {
-		int cont = 0;
 		system ("cls");
 		cout << "===========================================\n";
 		cout << "===== MENU DE ESCOLHA PARA CADASTRO =======\n";
@@ -67,58 +69,59 @@ int main (void) {
 		cout << "Digite 1 para um Novo Cadastro\n";
 		cout << "Digite 2 para um Ler um Cadastro\n";
 		cout << "Digite 3 para Sair do Menu\n";
-		cout << "Atualmente há: " << cont << " cadastros";
-		// falta listar todos que estao cadastrados
-		char menu;
+		cout << "Atualmente ha: " << cont << " cadastros" << endl;
+		// falta listar todos que estao cadastrados fazer um for dos nomes ate cont
+		int menu;
 		cin >> menu;
     	cadastro_cliente *vetorstruct = new cadastro_cliente[100];
     	cadastro_cliente cliente[100];
-		for (int i = 0; i <= 100; i++){
+		for (int i = 0; i < 100; i++){
         vetorstruct[i] = cliente[i];
 		}
 		if (menu == 1){
 			int id;
-			string a, b , c , d , e, f;
+			char a[aux], b[aux], c[aux], d[aux], e[aux], f[aux];
 			system ("cls");
 			cout << "===========================================\n";
 			cout << "================= CADASTRO ================\n";
 			cout << "===========================================\n";
 			cout << "Nome completo: ";
-			gets(a);
+			scanf(" %[^\n]", a);
 			cout << "Idade: ";
-			gets(id);
+			cin >> id;
 			cout << "Genero: ";
-			gets(b);
-			cout << "Agora seu endereço: \n";
+			scanf(" %[^\n]", b);
+			cout << "Agora seu endereco: \n";
 			cout << "Logradouro: ";
-			gets(c);
+			scanf(" %[^\n]", c);
 			cout << "Bairro: ";
-			gets(d);
+			scanf(" %[^\n]", d);
 			cout << "Cidade: ";
-			gets(e);
+			scanf(" %[^\n]", e);
 			cout << "UF: ";
-			gets(f);
-			vetorstruct[cont].inserir(a, id, b, c , d, e, f);
+			scanf(" %[^\n]", f);
+			string aA, bB, cC, dD, eE, fF;
+			aA = a; 
+			bB = b; 
+			cC = c; 
+			dD = d; 
+			fF = f;
+			vetorstruct[cont].inserir(aA, id, bB, cC, dD, eE, fF);
 			cont++;
 		}
-
-
-
-
-
-
-
-
-
-
+		if (menu == 2){
+			system ("cls");
+			cout << "Dado o fato que ha: " << cont << " cadastrados digite qual quer ler." << endl;
+			int sec;
+			cin >> sec;
+			vetorstruct[sec].imprimir();
+			system("pause");
+		}
+		if (menu == 3){
+			cout << "Finalizando Cadastros.. Saindo do Menu.";
+			break;
+		}
+	
 	}
-
-
-
-
-
-
-
-
 
 }
