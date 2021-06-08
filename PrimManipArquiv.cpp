@@ -1,58 +1,28 @@
+/* ==========================================================
+Aluno: Erika, Fabricio, Lailson
+Data: 08/06/2021
+Programa: Busca e ordenação
+Exercicio: Lista 07 – letra a
+========================================================== */
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
+#include <stdio.h> 
 #include <time.h>
 
 using namespace std;
 
-const int MAX = 10;
-int vetor[MAX];
+const int MAX = 10000;
+int vetor[MAX], i = 0;
 
-int random_number(int min_num, int max_num) {
-    int result = 0, low_num = 0, hi_num = 0;
-    if (min_num < max_num) {
-        low_num = min_num;
-        hi_num = max_num + 1; // include max_num in output
-    } else {
-        low_num = max_num + 1; // include max_num in output
-        hi_num = min_num;
+void read_txt_imput_array(){
+    FILE *arquivo; 
+    arquivo = fopen ("vetor10000.txt", "r");
+    while(!feof(arquivo)){
+        fscanf(arquivo, "%i\n", vetor[i]); 
+  	    i++;
     }
-    result = (rand() % (hi_num - low_num)) + low_num;
-    return result;
-}
-
-int existe(int num) {
-    for(int i=0;i<MAX;i++) {
-        if (vetor[i] == num)
-            return 1;
-    }
-    return -1;
-}
-
-int gerarNumero(int number) {
-    while(true) {
-        int numero = random_number(1, MAX);
-        if (existe(numero) == -1) {
-            vetor[number] = numero;
-            break;
-        }
-    }
-}
-
-void preencher() {
-    for (int i=0;i<MAX;i++) {
-        vetor[i] = -1;
-    }
-    for (int i=0; i<MAX; i++) {
-        gerarNumero(i);
-    }
-}
-
-void apresentar() { 
-    puts(">>>>>>>>>>>>>>>>> Apresentar");
-    for(int i=0; i<MAX; i++) {
-        printf("  %i\n", vetor[i]);
-    }
+fclose(arquivo);
 }
 
 void quickSort(int inicio, int final) {
@@ -81,26 +51,21 @@ void quickSort(int inicio, int final) {
 		quickSort(i, final);
 }
 
-void apresentarEmOrdem() { 
-    int valor = -1, vlAnt = -1;
-
-    puts(">>>>>>>>>>>>>>>>> Apresentar");
-    for(int i=0; i<MAX; i++) {
-        for (int j = 0; i < MAX; j++){
-            if ((vetor[j] < valor || valor == -1) && vetor[j] > valor){
-                    valor = vetor[j];
-            }  
+int where_number(int number_choosed){
+    for (size_t i = 0; i < MAX; i++){
+        if (vetor[i] == number_choosed){
+            return i;
         }
-    vlAnt = valor;
-    cout << valor;
     }
+    return -1; 
 }
 
 int main() {
     //char *name = (char *) malloc(sizeof(char)+1);
-    srand(time(NULL));
-    preencher();
+    read_txt_imput_array();    
+    while (true)
+    {
+    }
     quickSort(0, MAX);
-    apresentar();
 return EXIT_SUCCESS;
 }
