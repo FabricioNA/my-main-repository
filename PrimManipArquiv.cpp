@@ -66,14 +66,31 @@ int main() {
 	system("cls");
 	read_txt_imput_array();
 	cout << "Qual numero voce gostaria de encontrar? (para sair digite -1)  " << endl;
-	cin >> number;
+	cin >> number; 
 	if (number == -1){
 		cout << "Numero chave para saida digitado. fechando...";
 		break;
     }	
-	cout << "Seu numero se encontra no vetor desordenado, na casa: " << where_number(number) << endl;
+	cout << "Seu numero se encontra no vetor desordenado, na casa: " << where_number(number) << endl;\
+	system("pause");
+	for (size_t i = 0; i < MAX; i++){
+		cout << vetor[i] << " " << vetor[i+1] << " " << vetor[i+2] << " " << vetor[i+3] << " " << vetor[i+4] << " " << vetor[i+5] << " " << vetor[i+6] << " " << vetor[i+7] << " " << vetor[i+8] << " " << vetor[i+9] << " " << vetor[i+10] << " " <<
+		vetor[i+11] << " " << vetor[i+12] << " " << vetor[i+13] << " " << vetor[i+14] << " " << vetor[i+15] << " " << vetor[i+16] << " " << vetor[i+17] << " " << vetor[i+18] << " " << vetor[i+19] << " " << vetor[i+20] << endl;
+		if (i + 20 == MAX){
+			break;
+		}	
+	}
+	system("pause");
 	quickSort(0, MAX);
 	cout << "Porem no vetor ordenado esta em: " << where_number(number) << endl;
+	system("pause");
+	for (size_t i = 0; i < MAX; i++){
+		cout << vetor[i] << " " << vetor[i+1] << " " << vetor[i+2] << " " << vetor[i+3] << " " << vetor[i+4] << " " << vetor[i+5] << " " << vetor[i+6] << " " << vetor[i+7] << " " << vetor[i+8] << " " << vetor[i+9] << " " << vetor[i+10] << " " <<
+		vetor[i+11] << " " << vetor[i+12] << " " << vetor[i+13] << " " << vetor[i+14] << " " << vetor[i+15] << " " << vetor[i+16] << " " << vetor[i+17] << " " << vetor[i+18] << " " << vetor[i+19] << " " << vetor[i+20] << endl;
+		if (i + 20 == MAX){
+			break;
+		}	
+	}
 	system("pause");
 	}
 return EXIT_SUCCESS;
