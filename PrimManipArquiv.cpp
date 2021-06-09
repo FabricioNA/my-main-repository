@@ -8,7 +8,6 @@ Exercicio: Lista 07 – letra a
 #include <cstdio>
 #include <cstdlib>
 #include <stdio.h> 
-#include <time.h>
 
 using namespace std;
 
@@ -19,7 +18,7 @@ void read_txt_imput_array(){
     FILE *arquivo; 
     arquivo = fopen ("vetor10000.txt", "r");
     while(!feof(arquivo)){
-        fscanf(arquivo, "%i\n", vetor[i]); 
+        fscanf(arquivo, "%i\n", &vetor[i]); 
   	    i++;
     }
 fclose(arquivo);
@@ -62,10 +61,20 @@ int where_number(int number_choosed){
 
 int main() {
     //char *name = (char *) malloc(sizeof(char)+1);
-    read_txt_imput_array();    
-    while (true)
-    {
-    }
-    quickSort(0, MAX);
+	int number;
+	while (true){
+	system("cls");
+	read_txt_imput_array();
+	cout << "Qual numero voce gostaria de encontrar? (para sair digite -1)  " << endl;
+	cin >> number;
+	if (number == -1){
+		cout << "Numero chave para saida digitado. fechando...";
+		break;
+    }	
+	cout << "Seu numero se encontra no vetor desordenado, na casa: " << where_number(number) << endl;
+	quickSort(0, MAX);
+	cout << "Porem no vetor ordenado esta em: " << where_number(number) << endl;
+	system("pause");
+	}
 return EXIT_SUCCESS;
 }
