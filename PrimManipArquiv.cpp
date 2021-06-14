@@ -1,5 +1,5 @@
 /* ==========================================================
-Aluno: Erika, Fabricio, Lailson
+Aluno: Erika, Fabricio, Lailson, Roger
 Data: 08/06/2021
 Programa: Busca e ordenação
 Exercicio: Lista 07 – letra a
@@ -50,48 +50,41 @@ void quickSort(int inicio, int final) {
 		quickSort(i, final);
 }
 
-int where_number(int number_choosed){
-    for (size_t i = 0; i < MAX; i++){
-        if (vetor[i] == number_choosed){
-            return i;
-        }
-    }
-    return -1; 
+int where_number_binary(int elemento, int limEsq, int limDir) {
+	int meio = (limEsq + limDir)/2;
+	if (vetor[meio] == elemento)
+		return meio;
+	if (limEsq >= limDir)
+		return -1; 
+	else if (vetor[meio] < elemento)
+		return where_number_binary(elemento, meio+1, limDir);
+	else
+		return where_number_binary(elemento, limEsq, meio-1);
 }
 
 int main() {
     //char *name = (char *) malloc(sizeof(char)+1);
 	int number;
 	while (true){
-	system("cls");
-	read_txt_imput_array();
-	cout << "Qual numero voce gostaria de encontrar? (para sair digite -1)  " << endl;
-	cin >> number; 
-	if (number == -1){
-		cout << "Numero chave para saida digitado. fechando...";
-		break;
-    }	
-	cout << "Seu numero se encontra no vetor desordenado, na casa: " << where_number(number) << endl;\
-	system("pause");
-	for (size_t i = 0; i < MAX; i++){
-		cout << vetor[i] << " " << vetor[i+1] << " " << vetor[i+2] << " " << vetor[i+3] << " " << vetor[i+4] << " " << vetor[i+5] << " " << vetor[i+6] << " " << vetor[i+7] << " " << vetor[i+8] << " " << vetor[i+9] << " " << vetor[i+10] << " " <<
-		vetor[i+11] << " " << vetor[i+12] << " " << vetor[i+13] << " " << vetor[i+14] << " " << vetor[i+15] << " " << vetor[i+16] << " " << vetor[i+17] << " " << vetor[i+18] << " " << vetor[i+19] << " " << vetor[i+20] << endl;
-		if (i + 20 == MAX){
+		system("cls");
+		read_txt_imput_array();
+		cout << "Qual numero voce gostaria de encontrar? (para sair digite -1)  " << endl;
+		cin >> number; 
+		if (number == -1){
+			cout << "Numero chave para saida digitado. fechando...";
 			break;
-		}	
-	}
-	system("pause");
-	quickSort(0, MAX);
-	cout << "Porem no vetor ordenado esta em: " << where_number(number) << endl;
-	system("pause");
-	for (size_t i = 0; i < MAX; i++){
-		cout << vetor[i] << " " << vetor[i+1] << " " << vetor[i+2] << " " << vetor[i+3] << " " << vetor[i+4] << " " << vetor[i+5] << " " << vetor[i+6] << " " << vetor[i+7] << " " << vetor[i+8] << " " << vetor[i+9] << " " << vetor[i+10] << " " <<
-		vetor[i+11] << " " << vetor[i+12] << " " << vetor[i+13] << " " << vetor[i+14] << " " << vetor[i+15] << " " << vetor[i+16] << " " << vetor[i+17] << " " << vetor[i+18] << " " << vetor[i+19] << " " << vetor[i+20] << endl;
-		if (i + 20 == MAX){
-			break;
-		}	
-	}
-	system("pause");
+   		}	
+		cout << "Seu numero se encontra no vetor desordenado, na casa: " << where_number_binary(number, 0, MAX) << endl;
+		if (where_number_binary(number, 0, MAX) == -1){
+			cout << "Numero nao encontrado no vetor" << endl;
+   		}	
+		system("pause");
+		quickSort(0, MAX);
+		cout << "Porem no vetor ordenado esta em: " << where_number_binary(number, 0, MAX) << endl;
+		if (where_number_binary(number, 0, MAX) == -1){
+			cout << "Numero nao encontrado no vetor" << endl;
+   		}
+		system("pause");
 	}
 return EXIT_SUCCESS;
 }
