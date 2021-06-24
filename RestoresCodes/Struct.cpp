@@ -31,19 +31,7 @@ int main(){
     for (size_t i = 0; i < 5; i++){
         testedocodigo[i].imprimir();
     }
+
+
 return EXIT_SUCCESS;
 }
-    
-    /*Struct teste1, teste2, teste3, teste4, teste5;
-
-    testedocodigo[0] = teste1; testedocodigo[1] = teste2; testedocodigo[2] = teste3; testedocodigo[3] = teste4; testedocodigo[4] = teste5;
-
-    testedocodigo[0].inserir("Seu\n");
-    testedocodigo[1].inserir("Cu\n");
-    testedocodigo[2].inserir("Eh\n");
-    testedocodigo[3].inserir("Meu\n");
-    testedocodigo[4].inserir("Poha\n");
-    */
-
-
-

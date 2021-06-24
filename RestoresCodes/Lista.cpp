@@ -21,23 +21,22 @@ int main(void){
         lista.pop_back(); // retira o que ta por tras
     }
     lista.clear(); // limpa tudo
-    if(!(lista.empty())){
-; // verifica se ta vazio
-    cout << endl << endl;
-    srand(time(NULL));
-    for (size_t i = 0; i <= count; i++){
-        lista.push_front((rand() % 11) + 1); // inserir elemento aleatorio pela frente
-    }
-    lista.sort(); // ordena
-    lista.reverse(); // inverte
-    for (size_t i = 0; i <= count; i++){
-        cout << lista.front() << endl; // printa o que ta na frente
-        lista.pop_front(); // retira oq ta na frente
-    }
-    lista.merge(teste); // retira os elementos da lista original e passa pra de dentro do parametro 
-    for (size_t i = 0; i <= count; i++){
-        cout << lista.front() << endl; // printa o que ta na frente
-        lista.pop_front(); // retira oq ta na frente
-    }
+    if(!(lista.empty())){ // verifica se ta vazio
+        cout << endl << endl;
+        srand(time(NULL));
+        for (size_t i = 0; i <= count; i++){
+            lista.push_front((rand() % 11) + 1); // inserir elemento aleatorio pela frente
+        }
+        lista.sort(); // ordena
+        lista.reverse(); // inverte
+        for (size_t i = 0; i <= count; i++){
+            cout << lista.front() << endl; // printa o que ta na frente
+            lista.pop_front(); // retira oq ta na frente
+        }
+        lista.merge(teste); // retira os elementos da lista original e passa pra de dentro do parametro 
+        for (size_t i = 0; i <= count; i++){
+            cout << lista.front() << endl; // printa o que ta na frente
+            lista.pop_front(); // retira oq ta na frente
+        }
     }
 }

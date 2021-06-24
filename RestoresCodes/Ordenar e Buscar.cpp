@@ -17,7 +17,7 @@ void insertionSort() {
 		vetor[j + 1] = item;
 	}
 }
-void selectionSort() { 
+void selectionSort() {
 	int aux, min;
 	for (int i = 0; i < (tamVetor-1); i++) {
 		min = i;
@@ -32,6 +32,7 @@ void selectionSort() {
 		}
 	}
 }
+
 void bubbleSort(int posicao){ 
     if (posicao < 1)return; 
  
@@ -110,7 +111,7 @@ int buscaBinaria(int elemento, int limEsq, int limDir) {
 	if (vetor[meio] == elemento)
 		return meio;
 	if (limEsq >= limDir)
-		return -1; // não encontrado
+		return -1; // nï¿½o encontrado
 	else if (vetor[meio] < elemento)
 		return buscaBinaria(elemento, meio+1, limDir);
 	else
