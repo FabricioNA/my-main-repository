@@ -41,9 +41,9 @@ void cliente::selec(int tp){
 }
 
 int main(int argc, const char** argv) {
-    cliente *cl1 = new cliente();
-    cl1 ->selec(1);
-    cout << cl1 -> faixa_etaria;
+    cliente *cl = new cliente();
+    cl ->selec(1);
+    cout << cl -> faixa_etaria;
 
     return EXIT_SUCCESS;
 }
