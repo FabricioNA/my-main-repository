@@ -4,46 +4,52 @@
 #include <iostream>
 using namespace std;
 
-struct endereco {
-	std::string logr;
-	std::string bairro;
-	std::string cidade;
-	char uf[2];
+struct endereco{	
+    string logradouro;
+    string bairro;
+    string cidade;
+    string UF;
 };
 
-class cliente{
+struct cliente{
+    string nome;
+    int idade;
+    string sexo;
+};
+
+class cadastro{
 
 public: 
-    std::string nome;
-    int idade;
-    char sexo;
-    std::string faixa_etaria;
-    cliente(int tp);
+    cliente dados[100];
+    cadastro();
     void imprimir();
+    void set_end_logr(string name);
+    void set_end_bair(string name);
+    void set_end_cid(string name);
+    void set_end_UF(string name);
 
 private:
-    endereco end;
-
+    endereco end[100];
 };
 
-cliente::cliente(int tp){
-    switch (tp){
-        case 1:
-            faixa_etaria = "Crianca";
-            break;
-        case 2:
-            faixa_etaria = "Adulto";
-            break;
-        case 3:
-            faixa_etaria = "Idoso";
-            break;
-        default:
-            break;
-    }
+cadastro::cadastro(){
 }
 
-void cliente::imprimir(){
-    std::cout << "Faxa etaria" << faixa_etaria << std::endl;
-
+void cadastro::imprimir(){
 }
-#endif // !1
+
+void cadastro::set_end_logr(string name){
+    end->logradouro = name;
+}
+void cadastro::set_end_bair(string name){
+    end->bairro = name;
+}
+void cadastro::set_end_cid(string name){
+    end->cidade = name;
+}
+void cadastro::set_end_UF(string name){
+    end->UF = name;
+}
+
+
+#endif

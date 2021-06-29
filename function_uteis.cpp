@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdio.h>
+#define MAX 10000
 
 void cl_buffer(void){
     char aux;
@@ -21,7 +22,6 @@ int random_number(int min_num, int max_num) {
 	return result;
 }
 
-const int MAX = 10000;
 int vetor[MAX];
 
 void read_txt_imput_array(){
