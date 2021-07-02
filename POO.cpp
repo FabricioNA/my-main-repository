@@ -7,7 +7,9 @@ using namespace std;
 // o -> substitui o . para se referir como acontece na struct
 
 int i, cont, resposta;
-string aux;
+char aux[100];
+
+cadastro *cd = new cadastro;
 
 int main(int argc, const char** argv) {
     int opcao, teste,
@@ -53,31 +55,31 @@ return EXIT_SUCCESS;
 }
 void Cadastro(){
     do{
-        cadastro *cd = new cadastro;
         cout << endl << "Informe seu nome:" << endl;
         cin >> cd -> dados[i].nome;
 
         cout << "Sua idade:" << endl;
         cin >> cd -> dados[i].idade;
 
-        cout << endl << "Informe o sexo:" << endl;
+        cout << "Informe o sexo:" << endl;
         cin >> cd -> dados[i].sexo;
 
-        cout << endl << "Informe o logradouro:" << endl;
-        cin >> aux;
-        cd ->set_end_logr(aux);
+        cln_buffer();
+        cout << "Informe o logradouro:" << endl;
+        gets(aux);
+        cd -> set_end(1, aux);
 
         cout << "Bairro:" << endl;
-        cin >> aux;
-        cd ->set_end_bair(aux);
+        gets(aux);
+        cd -> set_end(2, aux);
 
         cout << endl << "Informe a Cidade:" << endl;
-        cin >> aux;
-        cd ->set_end_cid(aux);
+        gets(aux);
+        cd -> set_end(3, aux);
 
         cout << endl << "Informe a UF:" << endl;
-        cin >> aux;
-        cd ->set_end_UF(aux);
+        gets(aux);
+        cd -> set_end(4, aux);
 
         system("cls");
 
@@ -105,14 +107,13 @@ void Exibir(){
     cout << "---------- Lista de clientes -------------" << endl;
     do{
         cout << endl << "------------ Cadastros" << contador2 + 1 << " ----------------" << endl;
-        cout << endl << "NOME:" << dados[contador2].nome << endl;
-        cout << "Idade:" << dados[contador2].idade << endl;
-        cout << "Sexo:" << dados[contador2].sexo << endl;
-        cout << "Endereco:" << dados[contador2].endereco << endl;
-        cout << "Logradouro:" << endereco[contador2].logradouro << endl;
-        cout << "Bairro:" << endereco[contador2].bairro << endl;
-        cout << "Cidade:" << endereco[contador2].cidade << endl;
-        cout << "Estado(UF):" << endereco[contador2].UF << endl;
+        cout << endl << "NOME:" << cd -> get_dados(1) << endl;
+        cout << "Idade:" << cd -> dados[contador2].idade << endl;
+        cout << "Sexo:" << cd -> get_dados(2) << endl;
+        cout << "Logradouro:" << cd ->  get_end(1) << endl;
+        cout << "Bairro:" << cd ->  get_end(2) << endl;
+        cout << "Cidade:" << cd ->  get_end(3) << endl;
+        cout << "Estado(UF):" << cd ->  get_end(4) << endl;
         cout << endl << "------------------------------------------" << endl << endl;
         contador2++;
     }

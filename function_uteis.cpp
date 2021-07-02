@@ -2,7 +2,7 @@
 #include <stdio.h>
 #define MAX 10000
 
-void cl_buffer(void){
+void cln_buffer(){
     char aux;
     while ((aux = getchar()) != '\n' && aux != EOF);
 }

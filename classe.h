@@ -4,30 +4,28 @@
 #include <iostream>
 using namespace std;
 
-struct endereco{	
+typedef struct endereco{	
     string logradouro;
     string bairro;
     string cidade;
     string UF;
-};
+}end;
 
-struct cliente{
+typedef struct cliente{
     string nome;
     int idade;
     string sexo;
-};
+}dados;
 
 class cadastro{
 
 public: 
     cliente dados[100];
     cadastro();
-    void imprimir();
-    void set_end_logr(string name);
-    void set_end_bair(string name);
-    void set_end_cid(string name);
-    void set_end_UF(string name);
-
+    string get_dados(int choosed);
+    string get_end(int qual_choosed);
+    string set_end(int choosed, string name);
+  
 private:
     endereco end[100];
 };
@@ -35,21 +33,45 @@ private:
 cadastro::cadastro(){
 }
 
-void cadastro::imprimir(){
+string cadastro::get_dados(int wich_choosed){
+    switch (wich_choosed){
+    case 1:
+        return dados->nome;
+    case 2:
+        return dados->sexo;
+    default:
+        break;
+    }
 }
 
-void cadastro::set_end_logr(string name){
-    end->logradouro = name;
-}
-void cadastro::set_end_bair(string name){
-    end->bairro = name;
-}
-void cadastro::set_end_cid(string name){
-    end->cidade = name;
-}
-void cadastro::set_end_UF(string name){
-    end->UF = name;
+string cadastro::get_end(int qual_choosed){
+    switch (qual_choosed){
+    case 1:
+        return end->logradouro;
+    case 2:
+        return end->bairro;
+    case 3:
+        return end->cidade;
+    case 4:
+        return end->UF;
+    default:
+        break;
+    }
 }
 
+string cadastro::set_end(int choosed, string name){
+    switch (choosed){
+    case 1:
+        return end->logradouro = name;
+    case 2:
+        return end->bairro = name;
+    case 3:
+        return end->cidade = name;
+    case 4:
+        return end->UF = name;
+    default:
+        break;
+    }
+}
 
 #endif
