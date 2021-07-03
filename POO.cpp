@@ -11,7 +11,7 @@ char aux[100];
 
 cadastro *cd = new cadastro;
 
-int main(int argc, const char** argv) {
+int main() {
     int opcao, teste,
     i = 0,cont = 0,resposta = 0;
 
@@ -67,19 +67,19 @@ void Cadastro(){
         cln_buffer();
         cout << "Informe o logradouro:" << endl;
         gets(aux);
-        cd -> set_end(1, aux);
+        cd -> set_end(1, aux, i);
 
         cout << "Bairro:" << endl;
         gets(aux);
-        cd -> set_end(2, aux);
+        cd -> set_end(2, aux, i);
 
         cout << endl << "Informe a Cidade:" << endl;
         gets(aux);
-        cd -> set_end(3, aux);
+        cd -> set_end(3, aux, i);
 
         cout << endl << "Informe a UF:" << endl;
         gets(aux);
-        cd -> set_end(4, aux);
+        cd -> set_end(4, aux, i);
 
         system("cls");
 
@@ -106,14 +106,14 @@ void Exibir(){
 
     cout << "---------- Lista de clientes -------------" << endl;
     do{
-        cout << endl << "------------ Cadastros" << contador2 + 1 << " ----------------" << endl;
-        cout << endl << "NOME:" << cd -> get_dados(1) << endl;
+        cout << endl << "------------ Cadastrado " << contador2 + 1 << " ----------------" << endl;
+        cout << endl << "NOME:" << cd -> get_dados(1, contador2) << endl;
         cout << "Idade:" << cd -> dados[contador2].idade << endl;
-        cout << "Sexo:" << cd -> get_dados(2) << endl;
-        cout << "Logradouro:" << cd ->  get_end(1) << endl;
-        cout << "Bairro:" << cd ->  get_end(2) << endl;
-        cout << "Cidade:" << cd ->  get_end(3) << endl;
-        cout << "Estado(UF):" << cd ->  get_end(4) << endl;
+        cout << "Sexo:" << cd -> get_dados(2, contador2) << endl;
+        cout << "Logradouro:" << cd ->  get_end(1, contador2) << endl;
+        cout << "Bairro:" << cd ->  get_end(2, contador2) << endl;
+        cout << "Cidade:" << cd ->  get_end(3, contador2) << endl;
+        cout << "Estado(UF):" << cd ->  get_end(4, contador2) << endl;
         cout << endl << "------------------------------------------" << endl << endl;
         contador2++;
     }
