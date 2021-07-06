@@ -74,7 +74,18 @@ string cadastro::set_end(int choosed, string name, int i){
     }
 }
 
-class cadastro2:public cadastro{
+class cadastro2:public cadastro{ //herança
+
+public:
+    void test();
 };
+
+void cadastro2::test(){
+    cout << "Apenas um teste de heranca" << endl;
+}
+
+class cadastrogeral:public cadastro, public cadastro2{ //herança multipla
+
+}
 
 #endif

@@ -1,6 +1,13 @@
 #include <iostream>
 #include <stdio.h>
+#include <fstream>
 #define MAX 10000
+
+string name_with_malloc(string name){
+	char *mallocname;
+	mallocname =(char *) malloc(sizeof(char) + 1);
+	return name = mallocname;
+}
 
 void cln_buffer(){
     char aux;
