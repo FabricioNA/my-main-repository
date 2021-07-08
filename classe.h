@@ -85,7 +85,6 @@ void cadastro2::test(){
 }
 
 class cadastrogeral:public cadastro, public cadastro2{ //herança multipla
-
-}
+};
 
 #endif
