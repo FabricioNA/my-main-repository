@@ -12,8 +12,7 @@ char aux[100];
 cadastro *cd = new cadastro;
 
 int main() {
-    int opcao, teste,
-    i = 0,cont = 0,resposta = 0;
+    int opcao, teste, i = 0,cont = 0,resposta = 0;
 
     void Cadastro();
     void Exibir();
@@ -39,7 +38,7 @@ int main() {
             case 3:
             exit(1);
             break;
-
+ 
             default:
             system("cls");
             printf("\nOpcao Invalida!!Por favor tente novamente.\n\n");

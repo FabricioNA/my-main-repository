@@ -2,13 +2,20 @@
 #include <stdio.h>
 #include <fstream>
 #define MAX 10000
+/*
+	try{
+		//possivel parte que poderia dar error no sistema.
+	}catch(exception& exc){// (const char* exc) para usar throw e retorna mensagem
+		cout << "Error: " << exc.what() << endl;
+	}
+*/
 
-string name_with_malloc(string name){
+/*string name_with_malloc(string name){
 	char *mallocname;
 	mallocname =(char *) malloc(sizeof(char) + 1);
 	return name = mallocname;
 }
-
+*/
 void cln_buffer(){
     char aux;
     while ((aux = getchar()) != '\n' && aux != EOF);
