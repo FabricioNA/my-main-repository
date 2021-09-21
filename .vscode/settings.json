@@ -14,6 +14,7 @@
   "C_Cpp_Runner.warningsAsError": false,
   "files.associations": {
     "string": "cpp",
-    "xstring": "cpp"
+    "xstring": "cpp",
+    "ostream": "cpp"
   }
 }
