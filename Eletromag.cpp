@@ -1,11 +1,12 @@
 #include <iostream>
 #include <string>
 #include <math.h>
-#define k 9 * pow(10,9)
+#define k 9 * pow(10, 9)
 
 using namespace std;
 
-float verifymodule(float number){
+float verifymodule(float number)
+{
     if (number < 0)
     {
         number = number * (-1);
@@ -14,49 +15,58 @@ float verifymodule(float number){
     return number;
 }
 
-float CoulombsLaw(int choosed, float F, float q1, float q2, float r){
-    switch (choosed){
-        case 0:
-            F = (q1 * q2 / pow(r, 2)) * k;
-            return F;
-        case 1:
-            r = sqrt((q1 * q2 / F) * k);
-            return r;
-        case 2:
-            q1 = (pow(r, 2) * F / k * q2) ;
-            return q1;
-        case 3:
-            q2 = (pow(r, 2) * F / k * q1) ;
-            return q2;
-        default:
-            cout << "Escolha uma opcao possivel" << endl;
+float CoulombsLaw(int choosed, float F, float q1, float q2, float r)
+{
+    switch (choosed)
+    {
+    case 0:
+        F = (q1 * q2 / pow(r, 2)) * k;
+        return F;
+    case 1:
+        r = sqrt((q1 * q2 / F) * k);
+        return r;
+    case 2:
+        q1 = (pow(r, 2) * F / k * q2);
+        return q1;
+    case 3:
+        q2 = (pow(r, 2) * F / k * q1);
+        return q2;
+    default:
+        cout << "Escolha uma opcao possivel" << endl;
         break;
     }
 }
 
-int main(int argc, const char **argv){
+int main(int argc, const char **argv)
+{
     int opcao;
     float a, b, c, d;
 
-    while (true){
+    while (true)
+    {
 
-        inicio:
+    inicio:
         cout << "\a---- Lei de Coulomb: O que deseja encontrar? ----" << endl;
-        cout << endl << " 0 - Forca Eletroestatica" << endl;
+        cout << endl
+             << " 0 - Forca Eletroestatica" << endl;
         cout << " 1 - Distancia entre as cargas" << endl;
         cout << " 2 - Valor da Carga 1" << endl;
         cout << " 3 - Valor da Carga 2" << endl;
         cout << " 4 - Sair" << endl;
         cout << "Obs: Favor inserir numeros ja convertidos como o exemplo de: 1 mC -> 0.001";
-        cout << endl << "-----------------------------------------" << endl;
-        cout << endl << "Escolha uma opcao:" << endl;
+        cout << endl
+             << "-----------------------------------------" << endl;
+        cout << endl
+             << "Escolha uma opcao:" << endl;
         cin >> opcao;
 
-        if (opcao == 4){
+        if (opcao == 4)
+        {
             break;
         }
 
-        switch (opcao){
+        switch (opcao)
+        {
         case 0:
             cout << "Digite o valor da Carga 1:" << endl;
             cin >> b;
