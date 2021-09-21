@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
 #include <math.h>
-#define k 9 * pow(10, 9)
+#define k 9*pow(10, 9)
 
 using namespace std;
 
-float verifymodule(float number)
+double verifymodule(double number)
 {
     if (number < 0)
     {
@@ -15,7 +15,7 @@ float verifymodule(float number)
     return number;
 }
 
-float CoulombsLaw(int choosed, float F, float q1, float q2, float r)
+double CoulombsLaw(int choosed, double F, double q1, double q2, double r)
 {
     switch (choosed)
     {
@@ -26,10 +26,10 @@ float CoulombsLaw(int choosed, float F, float q1, float q2, float r)
         r = sqrt((q1 * q2 / F) * k);
         return r;
     case 2:
-        q1 = (pow(r, 2) * F / k * q2);
+        q1 = (pow(r, 2) * F) / (k * q2);
         return q1;
     case 3:
-        q2 = (pow(r, 2) * F / k * q1);
+        q2 = (pow(r, 2) * F) / (k * q1);
         return q2;
     default:
         cout << "Escolha uma opcao possivel" << endl;
@@ -40,7 +40,7 @@ float CoulombsLaw(int choosed, float F, float q1, float q2, float r)
 int main(int argc, const char **argv)
 {
     int opcao;
-    float a, b, c, d;
+    double a, b, c, d;
 
     while (true)
     {
