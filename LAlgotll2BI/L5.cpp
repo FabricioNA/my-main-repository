@@ -43,7 +43,7 @@ int main(){
 		gets (credencial.senha);	
 		puts ("\n===========================================\n");	
 		
-		if (!(strcmp("Lailson", credencial.usuario)) and !(strcmp("multivix", credencial.senha))){
+		if (!(strcmp("Fabricio", credencial.usuario)) and !(strcmp("multivix", credencial.senha))){
 				cout << "Credenciais Validadas! Carregando Menu de Cadastro..." << endl;
 				system("pause");
 				break;
