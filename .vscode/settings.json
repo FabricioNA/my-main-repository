@@ -18,5 +18,5 @@
     "ostream": "cpp",
     "iostream": "cpp"
   },
-  "dotnet.defaultSolution": "FirstProject/FirstProject.sln"
+  "dotnet.defaultSolution": "Estudos.C#.sln"
 }

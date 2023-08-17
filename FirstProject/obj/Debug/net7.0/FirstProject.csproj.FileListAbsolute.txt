@@ -1,0 +1,14 @@
+c:\Users\Fabricio N\OneDrive - Empresa Brasileira de Ensino - EMBRAE - MULTIVIX\GitRepository\my-main-repository\FirstProject\bin\Debug\net7.0\FirstProject.exe
+c:\Users\Fabricio N\OneDrive - Empresa Brasileira de Ensino - EMBRAE - MULTIVIX\GitRepository\my-main-repository\FirstProject\bin\Debug\net7.0\FirstProject.deps.json
+c:\Users\Fabricio N\OneDrive - Empresa Brasileira de Ensino - EMBRAE - MULTIVIX\GitRepository\my-main-repository\FirstProject\bin\Debug\net7.0\FirstProject.runtimeconfig.json
+c:\Users\Fabricio N\OneDrive - Empresa Brasileira de Ensino - EMBRAE - MULTIVIX\GitRepository\my-main-repository\FirstProject\bin\Debug\net7.0\FirstProject.dll
+c:\Users\Fabricio N\OneDrive - Empresa Brasileira de Ensino - EMBRAE - MULTIVIX\GitRepository\my-main-repository\FirstProject\bin\Debug\net7.0\FirstProject.pdb
+c:\Users\Fabricio N\OneDrive - Empresa Brasileira de Ensino - EMBRAE - MULTIVIX\GitRepository\my-main-repository\FirstProject\obj\Debug\net7.0\FirstProject.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Fabricio N\OneDrive - Empresa Brasileira de Ensino - EMBRAE - MULTIVIX\GitRepository\my-main-repository\FirstProject\obj\Debug\net7.0\FirstProject.AssemblyInfoInputs.cache
+c:\Users\Fabricio N\OneDrive - Empresa Brasileira de Ensino - EMBRAE - MULTIVIX\GitRepository\my-main-repository\FirstProject\obj\Debug\net7.0\FirstProject.AssemblyInfo.cs
+c:\Users\Fabricio N\OneDrive - Empresa Brasileira de Ensino - EMBRAE - MULTIVIX\GitRepository\my-main-repository\FirstProject\obj\Debug\net7.0\FirstProject.csproj.CoreCompileInputs.cache
+c:\Users\Fabricio N\OneDrive - Empresa Brasileira de Ensino - EMBRAE - MULTIVIX\GitRepository\my-main-repository\FirstProject\obj\Debug\net7.0\FirstProject.dll
+c:\Users\Fabricio N\OneDrive - Empresa Brasileira de Ensino - EMBRAE - MULTIVIX\GitRepository\my-main-repository\FirstProject\obj\Debug\net7.0\refint\FirstProject.dll
+c:\Users\Fabricio N\OneDrive - Empresa Brasileira de Ensino - EMBRAE - MULTIVIX\GitRepository\my-main-repository\FirstProject\obj\Debug\net7.0\FirstProject.pdb
+c:\Users\Fabricio N\OneDrive - Empresa Brasileira de Ensino - EMBRAE - MULTIVIX\GitRepository\my-main-repository\FirstProject\obj\Debug\net7.0\FirstProject.genruntimeconfig.cache
+c:\Users\Fabricio N\OneDrive - Empresa Brasileira de Ensino - EMBRAE - MULTIVIX\GitRepository\my-main-repository\FirstProject\obj\Debug\net7.0\ref\FirstProject.dll
